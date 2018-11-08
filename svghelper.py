@@ -34,3 +34,10 @@ class SVGPolygon:
         styleString = 'stroke="{0}" stroke-width="{1}" fill="{2}"'.format(self.stroke, self.strokeWidth, self.fill)
         objectString = '<polygon points="{0}" {1} />'.format(pointsString, styleString)
         return objectString
+
+def getBackgroundImage(width, height, backgroundColor = "white"):
+    image = SVGImage(width, height)
+    bgSquare = SVGPolygon([[0, 0], [width, 0], [width, height], [0, height]], 0)
+    bgSquare.fill = backgroundColor
+    image.addObject(bgSquare)
+    return image
