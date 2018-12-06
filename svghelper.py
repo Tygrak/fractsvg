@@ -35,7 +35,7 @@ class SVGPolygon:
         objectString = '<polygon points="{0}" {1} />'.format(pointsString, styleString)
         return objectString
 
-def getBackgroundImage(width, height, backgroundColor = "white"):
+def GetBackgroundImage(width, height, backgroundColor = "white"):
     image = SVGImage(width, height)
     bgSquare = SVGPolygon([[0, 0], [width, 0], [width, height], [0, height]], 0)
     bgSquare.fill = backgroundColor

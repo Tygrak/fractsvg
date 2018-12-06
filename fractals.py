@@ -3,7 +3,7 @@ from svghelper import *
 from fractalgenerators import *
 
 def SierpenskiTriangle(iterations):
-    image = getBackgroundImage(900, 900, "white")
+    image = GetBackgroundImage(900, 900, "white")
     polygons = []
     polygons.append(SVGPolygon([[100, 800], [800, 800], [450, 100]]))
     for polygon in generateSierpenski(iterations, polygons):
@@ -11,7 +11,7 @@ def SierpenskiTriangle(iterations):
     return image
 
 def QuadSierpenski(iterations):
-    image = getBackgroundImage(900, 900, "white")
+    image = GetBackgroundImage(900, 900, "white")
     polygons = []
     polygons.append(SVGPolygon([[100, 100], [800, 100], [450, 450]]))
     polygons.append(SVGPolygon([[800, 100], [800, 800], [450, 450]]))
@@ -22,7 +22,7 @@ def QuadSierpenski(iterations):
     return image
 
 def KochSnowflake(iterations):
-    image = getBackgroundImage(900, 900, "white")
+    image = GetBackgroundImage(900, 900, "white")
     polygons = []
     polygons.append(SVGPolygon([[300, 450+150*(3**0.5)], [600, 450+150*(3**0.5)]]))
     polygons.append(SVGPolygon([[600, 450+150*(3**0.5)], [750, 450]]))
@@ -35,7 +35,7 @@ def KochSnowflake(iterations):
     return image
 
 def DoubleKochCurve(iterations):
-    image = getBackgroundImage(900, 900, "white")
+    image = GetBackgroundImage(900, 900, "white")
     for i in range(iterations+1):
         polygons = []
         polygons.append(SVGPolygon([[100, 450], [800, 450]]))
@@ -45,7 +45,7 @@ def DoubleKochCurve(iterations):
     return image
 
 def KochCross(iterations):
-    image = getBackgroundImage(900, 900, "white")
+    image = GetBackgroundImage(900, 900, "white")
     polygons = []
     polygons.append(SVGPolygon([[100, 450], [450, 850]]))
     polygons.append(SVGPolygon([[450, 850], [800, 450]]))
@@ -56,7 +56,7 @@ def KochCross(iterations):
     return image
 
 def NotDragon(iterations):
-    image = getBackgroundImage(900, 900, "white")
+    image = GetBackgroundImage(900, 900, "white")
     polyg1 = SVGPolygon([[660, 450], [240, 450]])
     polyg1.strokeWidth = 6
     polyg2 = SVGPolygon([[240, 450], [660, 450]])
@@ -66,7 +66,7 @@ def NotDragon(iterations):
     return image
 
 def DragonCurve(iterations):
-    image = getBackgroundImage(900, 900, "white")
+    image = GetBackgroundImage(900, 900, "white")
     dragon = SVGPolygon([[220, 550], [770, 550]])
     dragon.stroke = "black"
     dragon.strokeWidth = 4.5
@@ -76,7 +76,7 @@ def DragonCurve(iterations):
     return image
 
 def DoubleDragonCurve(iterations):
-    image = getBackgroundImage(900, 900, "black")
+    image = GetBackgroundImage(900, 900, "black")
     dragon1 = SVGPolygon([[200, 450], [700, 450]])
     dragon1.stroke = "red"
     dragon1.strokeWidth = 4.5
